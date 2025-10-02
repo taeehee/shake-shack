@@ -22,7 +22,7 @@
 
 
     /* section_menu */
-    --fontSize-menu: 80px;
+    --fontSize-menu: 58px;
     --lineHeight-menu: 87px;
     --padding-menu: 30px 0px 0px 34px;
 
@@ -37,7 +37,7 @@
 .header .inner,
 .main_visual .inner,
 .section_rec,
-.section_menu .text_wrap,
+.section_menu .menu-01 .menu_text .text_wrap,
 .section_news .inner,
 .section_insta .inner,
 .footer .inner {
