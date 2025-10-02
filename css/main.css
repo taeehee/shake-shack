@@ -105,7 +105,6 @@
     /* background-color: burlywood; */
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .section_rec .inner .rec_text {
@@ -137,6 +136,10 @@
 .section_rec .inner .item {
     width: 33.33%;
     border: 1px solid #121212;
+}
+
+.section_rec .inner .item:hover {
+    background-color: rgb(80, 200, 120);
 }
 
 /* item에 hover했을때 img만 기울어짐 */
@@ -171,7 +174,6 @@
 
 .section_rec .inner .item a .inner .image {
     width: 100%;
-
 }
 
 .section_rec .inner .item a .inner .image .badge {
@@ -280,7 +282,6 @@
     /* 줄어들지 않게 */
     border: 1px solid #121212;
     
-
     bottom: auto;
     /* 애니메이션으로 올라오지 않게 */
     transform: none;
@@ -396,6 +397,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: 1px solid #FFFFFF;
+    border: 0 0 1px 0;
 }
 
 .store .store_right {
@@ -403,14 +406,15 @@
     background-color: #121212;
 }
 
-.store .store_right .inner {}
+.store .store_right .inner {
+    text-align: center;
+}
 
 .store .store_right .inner .text_wrap {
     font-size: var(--fontSize-rec);
     line-height: var(--lineHeight-rec);
     padding: 70px 0 0 0px;
     color: #FFFFFF;
-    text-align: center;
     margin-bottom: 72px;
 }
 
@@ -449,7 +453,9 @@
 }
 
 
-.section_insta {}
+.section_insta {
+    margin-bottom: 200px;
+}
 
 .section_insta .inner {
     width: 100%;
@@ -461,6 +467,8 @@
     width: 25%;
     border: 1px solid #121212;
     padding: 98px 26px;
+    font-size: var(--fontSize-insta);
+    line-height: var(--lineHeight-insta);
 }
 
 .section_insta .inner .insta_text .text_wrap {}
@@ -471,6 +479,21 @@
 
 .section_insta .inner .image {
     width: 25%;
+    border: 1px solid #121212;
+    margin: 0 0 0 -1px;
+}
+
+.section_insta .inner .image:nth-child(5){
+    margin: -1px 0 0 0px;
+}
+.section_insta .inner .image:nth-child(6){
+    margin: -1px 0px 0 -1px;
+}
+.section_insta .inner .image:nth-child(7){
+    margin: -1px -1px 0 -1px;
+}
+.section_insta .inner .image:nth-child(8){
+    margin: -1px 0 0 0px;
 }
 
 .section_insta .inner .image img {
