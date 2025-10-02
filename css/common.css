@@ -1,0 +1,83 @@
+:root {
+    /* section_rec */
+    --fontSize-rec: 58px;
+    --lineHeight-rec: 87px;
+    --padding-rec: 130px 34px 0px 34px;
+
+    /* section_rec_badge */
+    --badge-height: 38px;
+    --badge-fontSize: 16px;
+    --badge-fontWeight: 400;
+    --badge-lineHeight: 24px;
+    --badge-letterSpacing: -2.5%;
+    --badge-textColor: #ffff;
+
+
+    --redbadge-width: 18.54%;
+    --redbadge-color: #FE614F;
+
+    --grnbadge-width: 31.45%;
+    --grnbadge-color: #04AB68;
+
+
+
+    /* section_menu */
+    --fontSize-menu: 80px;
+    --lineHeight-menu: 87px;
+    --padding-menu: 30px 0px 0px 34px;
+
+    /* section_store */
+    --fontSize-rec: 58px;
+    --lineHeight-rec: 87px;
+
+}
+
+
+/* 공통스타일 정리 */
+.header .inner,
+.main_visual .inner,
+.section_rec,
+.section_menu .text_wrap,
+.section_news .inner,
+.section_insta .inner,
+.footer .inner {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+body {}
+
+.text_wrap h2 {
+    font-family: 'Apercu-Condensed-Pro';
+    font-weight: 700;
+    letter-spacing: -2.5%;
+}
+
+.text_wrap p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -2.5%;
+}
+
+/* 768~1043px일 때 */
+@media screen and (min-width:768px) and (max-width:1279px) {
+    :root {
+        --fontSize-rec: 32px;
+        --lineHeight-rec: 48px;
+        --padding-rec: 130px 24px;
+        
+        --badge-height: 38px;
+        --badge-fontSize: 12px;
+        --badge-lineHeight: 18px;
+        /* --badge-padding: 0 4px */
+        --redbadge-width: 20.25%;
+        --grnbadge-width: 38.83%;
+    }
+}
+
+/* 480~767px일 때 */
+@media screen and (min-width:480px) and (max-width:767px) {
+
+}
