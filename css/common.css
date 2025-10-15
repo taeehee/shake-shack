@@ -29,7 +29,6 @@
     /* section_insta */
     --fontSize-insta: 58px;
     --lineHeight-insta: 87px;
-
 }
 
 
@@ -38,7 +37,7 @@
 .main_visual .inner,
 .section_rec,
 .section_menu .menu-01 .menu_text .text_wrap,
-.section_news .inner,
+.section_event .inner,
 .section_insta .inner,
 .footer .inner {
     max-width: 1440px;
