@@ -1,4 +1,7 @@
 :root {
+    /* section_main_vis */
+    --main-color: #00BC77;
+
     /* section_rec */
     --fontSize-rec: 58px;
     --lineHeight-rec: 87px;
@@ -34,7 +37,6 @@
 
 /* 공통스타일 정리 */
 .header .inner,
-.main_visual .inner,
 .section_rec,
 .section_menu .menu-01 .menu_text .text_wrap,
 .section_event .inner,
@@ -45,7 +47,9 @@
     margin: 0 auto;
 }
 
-body {}
+body {
+    font-family: 'Pretendard';
+}
 
 .text_wrap h2 {
     font-family: 'Apercu-Condensed-Pro';
@@ -66,7 +70,7 @@ body {}
         --fontSize-rec: 32px;
         --lineHeight-rec: 48px;
         --padding-rec: 130px 24px;
-        
+
         --badge-height: 38px;
         --badge-fontSize: 12px;
         --badge-lineHeight: 18px;
@@ -77,6 +81,4 @@ body {}
 }
 
 /* 480~767px일 때 */
-@media screen and (min-width:480px) and (max-width:767px) {
-
-}
+@media screen and (min-width:480px) and (max-width:767px) {}
