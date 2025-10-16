@@ -940,6 +940,16 @@
 }
 
 /* 가상요소 선택자 밑줄 */
+.footer .inner .line{}
+
+.footer .inner .line::before{ 
+    content:''; /* before와 after는 인라인태그로 취급되기때문에,문자를 쓰지않기때문에 따옴표 사이를 비워둔다 */
+    width: 100%;
+    height: 1px;
+    background-color: #121212;
+    display: block;
+    margin-bottom: 28px;
+}
 
 .footer .inner .footer_02 {}
 
