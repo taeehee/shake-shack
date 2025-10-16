@@ -39,7 +39,7 @@
 .header .inner,
 .section_rec,
 .section_menu .menu-01 .menu_text .text_wrap,
-.section_event .inner,
+.section_event .gird_wrap02 .list,
 .section_insta .inner,
 .footer .inner {
     max-width: 1440px;
@@ -62,6 +62,30 @@ body {
     font-weight: 400;
     line-height: 30px;
     letter-spacing: -2.5%;
+}
+
+.footer .inner .footer_01 .nav_wrap {
+    font-family: 'Apercu-Condensed-Pro';
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -3%;
+}
+
+.footer .inner .footer_02 .info_wrap {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -2.5%;
+    color: rgb(18, 18, 18, 0.8);
+}
+
+.footer .inner .footer_02 .copyright {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -2.5%;
+    color: rgb(18, 18, 18, 0.8);  
 }
 
 /* 768~1043px일 때 */
