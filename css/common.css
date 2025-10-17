@@ -26,12 +26,16 @@
     --padding-menu: 30px 0px 0px 34px;
 
     /* section_store */
-    --fontSize-rec: 58px;
-    --lineHeight-rec: 87px;
+
+    /* section_event */
+    /* 자세히보기버튼 */
 
     /* section_insta */
     --fontSize-insta: 58px;
     --lineHeight-insta: 87px;
+
+    /* footer */
+
 }
 
 
@@ -39,7 +43,8 @@
 .header .inner,
 .section_rec,
 .section_menu .menu-01 .menu_text .text_wrap,
-.section_event .gird_wrap02 .list,
+.section_event_pc .gird_wrap02 .list,
+.section_event_mobile,
 .section_insta .inner,
 .footer .inner {
     max-width: 1440px;
@@ -85,24 +90,5 @@ body {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: -2.5%;
-    color: rgb(18, 18, 18, 0.8);  
+    color: rgb(18, 18, 18, 0.8);
 }
-
-/* 768~1043px일 때 */
-@media screen and (min-width:768px) and (max-width:1279px) {
-    :root {
-        --fontSize-rec: 32px;
-        --lineHeight-rec: 48px;
-        --padding-rec: 130px 24px;
-
-        --badge-height: 38px;
-        --badge-fontSize: 12px;
-        --badge-lineHeight: 18px;
-        /* --badge-padding: 0 4px */
-        --redbadge-width: 20.25%;
-        --grnbadge-width: 38.83%;
-    }
-}
-
-/* 480~767px일 때 */
-@media screen and (min-width:480px) and (max-width:767px) {}

@@ -7,7 +7,22 @@
     <title>SHAKE SHACK</title>
     <link rel="stylesheet" href="css/main.css">
     <script>
+         //코드 해석
+        //'.nav_btn'이라는 클래스를 가진 요소를 찾아서, 클릭 이벤트를 추가하고, 
+        //클릭 시 {중괄호 내용}을 실행시켜라.
+        // {'.nav_mobile'이라는 클래스를 가진 요소를 찾아서, active라는 클래스를 추가해라}
+        //'.close_btn'이라는 클래스를 가진 요소를 찾아서, 클릭 이벤트를 추가하고,
+        //클릭 시 {중괄호 내용}을 실행시켜라.
+        //{'.nav_mobile'이라는 클래스를 가진 요소를 찾아서 active라는 클래스를 제거해라}
+        window.onload = () => {
+            document.querySelector('.nav_btn').addEventListener('click', () => {
+                document.querySelector('.nav_mobile').classList.add('active');
+            });
+            document.querySelector('.close_btn').addEventListener('click', () => {
+                document.querySelector('.nav_mobile').classList.remove('active');
+            });
 
+        };//script end
     </script>
 </head>
 
@@ -15,19 +30,44 @@
     <div id="fullpage">
         <div class="section" id="section0">
             <div id="wrap">
+
                 <header class="header">
                     <div class="inner">
                         <h1 class="logo">
                             <a href="#"><img src="img/icon/logo.svg" alt="로고"></a>
                         </h1><!-- logo -->
 
-                        <div class="nav">
+                        <!-- 데스크탑.ver, 모바일.ver 각각 만들어주기 -->
+                        <div class="nav_pc pc">
                             <ul class="gnb">
-                                <li><a href="#">Brand</a></li>
-                                <li><a href="#">Menu</a></li>
-                                <li><a href="#">Store</a></li>
-                                <li><a href="#">News & Event</a></li>
-                                <li><a href="#">Customer</a></li>
+                                <li><a href="#">BRAND</a></li>
+                                <li><a href="#">MENU</a></li>
+                                <li><a href="#">STORE</a></li>
+                                <li><a href="#">NEWS & EVENT</a></li>
+                                <li><a href="#"></a></li>
+                            </ul><!-- gnb -->
+
+                            <ul class="lang_wrap pc">
+                                <li><a href="#">KOR</li></a>
+                                <li><a href="#">ENG</li></a>
+                            </ul><!-- lang_wrap pc-->
+                        </div><!-- nav_pc pc -->
+
+                        <button class="nav_btn mobile"> <!-- 버튼img에 a태그 씌우지말 것!(버튼태그는 a태그와 쓰지않는다) -->
+                            <img src="img/icon/menu-button.svg" alt="메뉴버튼">
+                        </button><!-- nav_btn end -->
+
+                        <!-- nav 데스크탑.ver, 모바일.ver 각각 만들어주기 -->
+                        <div class="nav_mobile mobile">
+                            <button class="close_btn"> <!-- 버튼img에 a태그 씌우지말 것!(버튼태그는 a태그와 쓰지않는다) -->
+                                <img src="img/icon/close.svg" alt="메뉴닫기">
+                            </button><!-- close_btn end -->
+
+                            <ul class="gnb">
+                                <li><a href="#">BRAND</a></li>
+                                <li><a href="#">MENU</a></li>
+                                <li><a href="#">STORE</a></li>
+                                <li><a href="#">NEWS & EVENT</a></li>
                                 <li><a href="#"></a></li>
                             </ul><!-- gnb -->
 
@@ -35,7 +75,8 @@
                                 <li><a href="#">KOR</li></a>
                                 <li><a href="#">ENG</li></a>
                             </ul><!-- lang_wrap -->
-                        </div><!-- nav -->
+                        </div><!-- nav_mobile end -->
+
                     </div><!-- inner -->
                 </header><!-- header -->
 
@@ -50,7 +91,9 @@
                                         <p>하루 종일, 더 풍성하게! </br>
                                             Shack All Day 세트 혜택을 만나보세요!</p>
                                     </div><!-- title_text_wrap -->
-                                    <a href="#"><p>자세히 보기</p></a>
+                                    <a href="#">
+                                        <p>자세히 보기</p>
+                                    </a>
                                 </div><!-- text_wrap -->
                             </div><!-- main_vis_text_sec_01 -->
 
@@ -293,99 +336,187 @@
                     </section><!-- section_store -->
 
 
-                    <section class="section_event">
-                                <div class="gird_wrap01">
-                                    <div class="text_sec">
-                                        <div class="text_wrap">
-                                            <h2>News & Event</h2>
-                                            <a href="#"><p>뉴스 & 이벤트 더보기</p></a>
-                                        </div><!-- text_wrap -->
-                                    </div><!-- text_sec -->
-                                    <div class="gird"></div>
-                                </div><!-- gird_wrap01 -->
+                    <section class="section_event_pc pc">
+                        <div class="gird_wrap01">
+                            <div class="text_sec">
+                                <div class="text_wrap">
+                                    <h2>News & Event</h2>
+                                    <a href="#">
+                                        <p>뉴스 & 이벤트 더보기</p>
+                                    </a>
+                                </div><!-- text_wrap -->
+                            </div><!-- text_sec -->
+                            <div class="gird"></div>
+                        </div><!-- gird_wrap01 -->
 
-                                <div class="gird_wrap02">
-                                    <div class="list">
-                                        <div class="item">
-                                            <div class="image">
-                                                <img src="img/이벤트1.jpg" alt="이벤트1">
-                                            </div><!-- image -->
-                                            <div class="text">
-                                                <div class="inner">
-                                                    <div class="text_wrap">
-                                                        <div class="sort">
-                                                            <strong>SHACK NEWS</strong>
-                                                        </div><!-- sort -->
-                                                        <div class="title_wrap">
-                                                            <h2>매월 1,2,3일은 sHACK DAY! 9월은 더 불고기 쉑 무료 세트 업그레이드 혜택</h2>
-                                                            <p>더 풍성한 혜택으로 다시 돌아온 쉑데이! 매월 1, 2, 3일은 쉐이크쉑 브랜드 데이 SHACK DAY를 즐겨보세요!</p>
-                                                        </div><!-- title_wrap -->
-                                                    </div><!-- text_wrap -->
-                                                    <div class="date_wrap">
-                                                        <p>2025.09.01</p>
-                                                        <div class="button">
-                                                            <a href="#">자세히 보기</a>
-                                                        </div><!-- button -->
-                                                    </div><!-- date_wrap -->
-                                                </div><!-- inner -->
-                                            </div><!-- text -->
-                                        </div><!-- item -->
+                        <div class="gird_wrap02">
+                            <div class="list">
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="img/이벤트1.jpg" alt="이벤트1">
+                                    </div><!-- image -->
+                                    <div class="text">
+                                        <div class="inner">
+                                            <div class="text_wrap">
+                                                <div class="sort">
+                                                    <strong>SHACK NEWS</strong>
+                                                </div><!-- sort -->
+                                                <div class="title_wrap">
+                                                    <h2>매월 1,2,3일은 sHACK DAY! 9월은 더 불고기 쉑 무료 세트 업그레이드 혜택</h2>
+                                                    <p>더 풍성한 혜택으로 다시 돌아온 쉑데이! 매월 1, 2, 3일은 쉐이크쉑 브랜드 데이 SHACK DAY를 즐겨보세요!
+                                                    </p>
+                                                </div><!-- title_wrap -->
+                                            </div><!-- text_wrap -->
+                                            <div class="date_wrap">
+                                                <p>2025.09.01</p>
+                                                <div class="button">
+                                                    <a href="#">자세히 보기</a>
+                                                </div><!-- button -->
+                                            </div><!-- date_wrap -->
+                                        </div><!-- inner -->
+                                    </div><!-- text -->
+                                </div><!-- item -->
 
-                                        <div class="item">
-                                            <div class="image">
-                                                <img src="img/이벤트2.jpg" alt="이벤트2">
-                                            </div><!-- image -->
-                                            <div class="text">
-                                                <div class="inner">
-                                                    <div class="text_wrap">
-                                                        <div class="sort">
-                                                            <strong>OUR FOOD</strong>
-                                                        </div><!-- sort -->
-                                                        <div class="title_wrap">
-                                                            <h2>고기로 꽉 채운 진짜 불고기 버거 ‘더 불고기 쉑’ 출시!</h2>
-                                                            <p>쉐이크쉑이 진짜 소불고기를 더해 고기 맛을 꽉 채운 신제품 2종을 출시했습니다!</p>
-                                                        </div><!-- title_wrap -->
-                                                    </div><!-- text_wrap -->
-                                                    <div class="date_wrap">
-                                                        <p>2025.08.14</p>
-                                                        <div class="button">
-                                                            <a href="#">자세히 보기</a>
-                                                        </div><!-- button -->
-                                                    </div><!-- date_wrap -->
-                                                </div><!-- inner -->
-                                            </div><!-- text -->
-                                        </div><!-- item -->
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="img/이벤트2.jpg" alt="이벤트2">
+                                    </div><!-- image -->
+                                    <div class="text">
+                                        <div class="inner">
+                                            <div class="text_wrap">
+                                                <div class="sort">
+                                                    <strong>OUR FOOD</strong>
+                                                </div><!-- sort -->
+                                                <div class="title_wrap">
+                                                    <h2>고기로 꽉 채운 진짜 불고기 버거 ‘더 불고기 쉑’ 출시!</h2>
+                                                    <p>쉐이크쉑이 진짜 소불고기를 더해 고기 맛을 꽉 채운 신제품 2종을 출시했습니다!</p>
+                                                </div><!-- title_wrap -->
+                                            </div><!-- text_wrap -->
+                                            <div class="date_wrap">
+                                                <p>2025.08.14</p>
+                                                <div class="button">
+                                                    <a href="#">자세히 보기</a>
+                                                </div><!-- button -->
+                                            </div><!-- date_wrap -->
+                                        </div><!-- inner -->
+                                    </div><!-- text -->
+                                </div><!-- item -->
 
-                                        <div class="item">
-                                            <div class="image">
-                                                <img src="img/이벤트3.jpg" alt="이벤트3">
-                                            </div><!-- image -->
-                                            <div class="text">
-                                                <div class="inner">
-                                                    <div class="text_wrap">
-                                                        <div class="sort">
-                                                            <strong>SHACK NEWS</strong>
-                                                        </div><!-- sort -->
-                                                        <div class="title_wrap">
-                                                            <h2>레몬에이드 50% OFF! 시원한 혜택과 함께 시원해진 여름!</h2>
-                                                            <p>올 여름 무더위를 해결할 레몬에이드 프로모션 등장! 8월 11일부터 매장에서 직접 만드는 쉐이크쉑의 시그니처 레몬에이드를
-                                                                50% 할인된 가격으로 만나보세요. 이번 여름은 쾌적한 쉐이크쉑</p>
-                                                        </div><!-- title_wrap -->
-                                                    </div><!-- text_wrap -->
-                                                    <div class="date_wrap">
-                                                        <p>2025.08.11</p>
-                                                        <div class="button">
-                                                            <a href="#">자세히 보기</a>
-                                                        </div><!-- button -->
-                                                    </div><!-- date_wrap -->
-                                                </div><!-- inner -->
-                                            </div><!-- text -->
-                                        </div><!-- item -->
-                                    </div><!-- list -->
-                                </div><!-- gird_wrap02 -->
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="img/이벤트3.jpg" alt="이벤트3">
+                                    </div><!-- image -->
+                                    <div class="text">
+                                        <div class="inner">
+                                            <div class="text_wrap">
+                                                <div class="sort">
+                                                    <strong>SHACK NEWS</strong>
+                                                </div><!-- sort -->
+                                                <div class="title_wrap">
+                                                    <h2>레몬에이드 50% OFF! 시원한 혜택과 함께 시원해진 여름!</h2>
+                                                    <p>올 여름 무더위를 해결할 레몬에이드 프로모션 등장! 8월 11일부터 매장에서 직접 만드는 쉐이크쉑의 시그니처
+                                                        레몬에이드를
+                                                        50% 할인된 가격으로 만나보세요. 이번 여름은 쾌적한 쉐이크쉑</p>
+                                                </div><!-- title_wrap -->
+                                            </div><!-- text_wrap -->
+                                            <div class="date_wrap">
+                                                <p>2025.08.11</p>
+                                                <div class="button">
+                                                    <a href="#">자세히 보기</a>
+                                                </div><!-- button -->
+                                            </div><!-- date_wrap -->
+                                        </div><!-- inner -->
+                                    </div><!-- text -->
+                                </div><!-- item -->
+                            </div><!-- list -->
+                        </div><!-- gird_wrap02 -->
 
-                                <div class="gird_wrap03"></div>
-                    </section><!-- section_event -->
+                        <div class="gird_wrap03"></div>
+                    </section><!-- section_event_pc pc-->
+
+
+                    <section class="section_event_mobile mobile">
+                         <div class="list">
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="img/이벤트1.jpg" alt="이벤트1">
+                                    </div><!-- image -->
+                                    <div class="text">
+                                        <div class="inner">
+                                            <div class="text_wrap">
+                                                <div class="sort">
+                                                    <strong>SHACK NEWS</strong>
+                                                </div><!-- sort -->
+                                                <div class="title_wrap">
+                                                    <h2>매월 1,2,3일은 sHACK DAY! 9월은 더 불고기 쉑 무료 세트 업그레이드 혜택</h2>
+                                                    <p>더 풍성한 혜택으로 다시 돌아온 쉑데이! 매월 1, 2, 3일은 쉐이크쉑 브랜드 데이 SHACK DAY를 즐겨보세요!
+                                                    </p>
+                                                </div><!-- title_wrap -->
+                                            </div><!-- text_wrap -->
+                                            <div class="date_wrap">
+                                                <p>2025.09.01</p>
+                                                <div class="button">
+                                                    <a href="#">자세히 보기</a>
+                                                </div><!-- button -->
+                                            </div><!-- date_wrap -->
+                                        </div><!-- inner -->
+                                    </div><!-- text -->
+                                </div><!-- item -->
+
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="img/이벤트2.jpg" alt="이벤트2">
+                                    </div><!-- image -->
+                                    <div class="text">
+                                        <div class="inner">
+                                            <div class="text_wrap">
+                                                <div class="sort">
+                                                    <strong>OUR FOOD</strong>
+                                                </div><!-- sort -->
+                                                <div class="title_wrap">
+                                                    <h2>고기로 꽉 채운 진짜 불고기 버거 ‘더 불고기 쉑’ 출시!</h2>
+                                                    <p>쉐이크쉑이 진짜 소불고기를 더해 고기 맛을 꽉 채운 신제품 2종을 출시했습니다!</p>
+                                                </div><!-- title_wrap -->
+                                            </div><!-- text_wrap -->
+                                            <div class="date_wrap">
+                                                <p>2025.08.14</p>
+                                                <div class="button">
+                                                    <a href="#">자세히 보기</a>
+                                                </div><!-- button -->
+                                            </div><!-- date_wrap -->
+                                        </div><!-- inner -->
+                                    </div><!-- text -->
+                                </div><!-- item -->
+
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="img/이벤트3.jpg" alt="이벤트3">
+                                    </div><!-- image -->
+                                    <div class="text">
+                                        <div class="inner">
+                                            <div class="text_wrap">
+                                                <div class="sort">
+                                                    <strong>SHACK NEWS</strong>
+                                                </div><!-- sort -->
+                                                <div class="title_wrap">
+                                                    <h2>레몬에이드 50% OFF! 시원한 혜택과 함께 시원해진 여름!</h2>
+                                                    <p>올 여름 무더위를 해결할 레몬에이드 프로모션 등장! 8월 11일부터 매장에서 직접 만드는 쉐이크쉑의 시그니처
+                                                        레몬에이드를
+                                                        50% 할인된 가격으로 만나보세요. 이번 여름은 쾌적한 쉐이크쉑</p>
+                                                </div><!-- title_wrap -->
+                                            </div><!-- text_wrap -->
+                                            <div class="date_wrap">
+                                                <p>2025.08.11</p>
+                                                <div class="button">
+                                                    <a href="#">자세히 보기</a>
+                                                </div><!-- button -->
+                                            </div><!-- date_wrap -->
+                                        </div><!-- inner -->
+                                    </div><!-- text -->
+                                </div><!-- item -->
+                            </div><!-- list -->
+
+                    </section><!-- section_event_mobile mobile -->
 
 
                     <section class="section_insta">
@@ -393,7 +524,9 @@
                             <div class="insta_text">
                                 <div class="text_wrap">
                                     <h2>Instagram</h2>
-                                    <a href="https://www.instagram.com/shakeshackkr/"><p>@shakeshackkr</p></a>
+                                    <a href="https://www.instagram.com/shakeshackkr/">
+                                        <p>@shakeshackkr</p>
+                                    </a>
                                 </div><!-- text_wrap -->
                             </div><!-- insta_text -->
 
@@ -418,7 +551,6 @@
                             <div class="image">
                                 <img src="img/인스타2.jpg" alt="인스타8">
                             </div><!-- image -->
-
                         </div><!-- inner -->
                     </section><!-- section_insta -->
                 </main><!-- main -->
@@ -446,16 +578,24 @@
                                 <div class="download_wrap">
                                     <p>Download Our App</p>
                                     <div class="icon_wrap">
-                                        <a href="https://api.happypointcard.com/page/happy-story/happy-story-view.spc?idx=2477&share=Y"><img src="img/icon/app_appstore.svg" alt="애플app다운로드"></a>
-                                        <a href="https://api.happypointcard.com/page/happy-story/happy-story-view.spc?idx=2477&share=Y"><img src="img/icon/app_googleplay .svg" alt="구글app다운로드"></a>
+                                        <a
+                                            href="https://api.happypointcard.com/page/happy-story/happy-story-view.spc?idx=2477&share=Y"><img
+                                                src="img/icon/app_appstore.svg" alt="애플app다운로드"></a>
+                                        <a
+                                            href="https://api.happypointcard.com/page/happy-story/happy-story-view.spc?idx=2477&share=Y"><img
+                                                src="img/icon/app_googleplay .svg" alt="구글app다운로드"></a>
                                     </div><!-- icon_wrap -->
                                 </div><!-- download_wrap -->
 
                                 <ul class="sns">
-                                    <li><a href="https://www.instagram.com/shakeshackkr/"><img src="img/icon/Instagram.png" alt="인스타그램"></a></li>
-                                    <li><a href="https://www.youtube.com/channel/UCw86ggEkvY8_RXpvCFjNS6g"><img src="img/icon/YouTube.png" alt="유튜브"></a></li>
-                                    <li><a href="https://www.facebook.com/shakeshackkorea"><img src="img/icon/Facebook.png" alt="페이스북"></a></li>
-                                    <li><a href="https://pf.kakao.com/_xdlBDj"><img src="img/icon/kakao.svg" alt="카카오채널"></a></li>
+                                    <li><a href="https://www.instagram.com/shakeshackkr/"><img
+                                                src="img/icon/Instagram.png" alt="인스타그램"></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCw86ggEkvY8_RXpvCFjNS6g"><img
+                                                src="img/icon/YouTube.png" alt="유튜브"></a></li>
+                                    <li><a href="https://www.facebook.com/shakeshackkorea"><img
+                                                src="img/icon/Facebook.png" alt="페이스북"></a></li>
+                                    <li><a href="https://pf.kakao.com/_xdlBDj"><img src="img/icon/kakao.svg"
+                                                alt="카카오채널"></a></li>
                                 </ul><!-- sns -->
                             </div><!-- right_wrap -->
                         </div><!-- footer_01 -->
@@ -483,13 +623,8 @@
 
             </div><!-- wrap -->
 
-
         </div><!-- section fp-auto-height-responsive -->
     </div><!-- fullpage -->
-
-
-
-
 </body>
 
 </html>
