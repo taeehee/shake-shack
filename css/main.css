@@ -6,7 +6,7 @@
 @import url('../font/Pretendard/stylesheet.css');
 
 body {
-    position: relative;
+    /* position: relative; 이거 뭐때문에 썼더라..*/
 }
 
 button {
@@ -167,6 +167,7 @@ button {
     height: 522px;
     display: flex;
     border-bottom: 1px solid #121212;
+    position: relative;
 }
 
 .main_visual .main_vis_wrap_01 .main_vis_text_sec_01 {
@@ -178,8 +179,12 @@ button {
 }
 
 .main_visual .main_vis_wrap_01 .main_vis_text_sec_01 .text_wrap {
-    margin: 0 auto;
-
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .main_visual .main_vis_wrap_01 .main_vis_text_sec_01 .text_wrap .title_text_wrap h2 {
@@ -207,19 +212,28 @@ button {
 .main_visual .main_vis_wrap_01 .main_vis_img_sec_01 {
     width: calc(100% - 42.65%);
     height: 100%;
+    background-color: #90CFEE;
+    display: flex;
+    overflow: hidden;
+    border-left: 1px solid #121212;
 }
 
 
 .main_visual .main_vis_wrap_01 .main_vis_img_sec_01 video {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: block;
+    object-fit: contain;
+    transform: rotate(90deg);
+    margin: 0 1px;
+
+
 }
 
 .main_visual .main_vis_wrap_02 {
     width: 100%;
     height: 236px;
     display: flex;
+    position: relative;
 }
 
 .main_visual .main_vis_wrap_02 .main_vis_text_sec_02 {
@@ -228,11 +242,15 @@ button {
     height: 100%;
     display: flex;
     align-items: center;
-
 }
 
 .main_visual .main_vis_wrap_02 .main_vis_text_sec_02 .text_wrap {
-    margin: 0 auto;
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .main_visual .main_vis_wrap_02 .main_vis_text_sec_02 .text_wrap p {
@@ -458,7 +476,6 @@ button {
     border: 1px solid #121212;
     z-index: 9999;
     background-color: #00BC77;
-
 }
 
 .section_menu .menu-01 .menu_text .text_wrap {
@@ -577,7 +594,6 @@ button {
 .section_store .store_right {
     width: 57.34%;
     background-color: #121212;
-
 }
 
 .section_store .store_right .inner {
@@ -589,6 +605,8 @@ button {
     flex-direction: column;
     justify-content: space-between;
     transform: translateY(30%);
+
+        
 }
 
 .section_store .store_right .inner .text_wrap {
@@ -681,7 +699,7 @@ button {
 .section_event_pc .gird_wrap01 .gird {}
 
 .section_event_pc .gird_wrap02 {
-    height: 660px;
+    /* height: 660px; 이미지 비율을 위해 h값 지정x */
     border-bottom: 1px solid #121212;
 }
 
@@ -695,24 +713,22 @@ button {
     height: 100%;
     border: 1px solid #121212;
     border-top: 0;
-
 }
 
 .section_event_pc .gird_wrap02 .list .item .image {
     width: 100%;
-    /* height: 332px; */
-    height: 50%;
 }
 
 .section_event_pc .gird_wrap02 .list .item .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    /* 이미지아래 틈이 있어서 */
 }
 
 .section_event_pc .gird_wrap02 .list .item .text {
     /* height: 326px; */
-    height: 50%;
     padding: 20px 30px 60px 30px;
     background-color: #FDFDFD;
 }
@@ -784,7 +800,8 @@ button {
 }
 
 .section_event_pc .gird_wrap02 .list .item .text .inner .date_wrap .button {
-    width: 30%;
+    /* width: 30%; 버튼같은 작은 컨텐츠는 px로 지정할것 %(x) */
+    width: 126px;
     height: 38px;
 
     background-color: #6DB33E;
@@ -1141,6 +1158,8 @@ button {
         /* 오른쪽 배치 */
         text-align: right;
         /* 우측정렬 */
+        height: 100%;
+        z-index: 999999999;
     }
 
     .header .inner .nav_mobile.active {
@@ -1176,36 +1195,39 @@ button {
     }
 
     .header .inner .nav_mobile .lang_wrap {
-        flex-wrap: wrap;
+        display: flex;
+        gap: 22px;
+        font-size: 20px;
+        font-weight: 700;
     }
 
     .main_visual {
         display: none;
     }
 
-/* sec_rec */
-.section_rec {
-}
+    /* sec_rec */
+    .section_rec {}
 
-.section_rec .inner {
-    display: flex;
-    flex-wrap: wrap;
-}
+    .section_rec .inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-.section_rec .inner .rec_text {
-    width: 50%;
-    height: auto;
-    border: 1px solid #121212;
-    margin: 0 0 -1px 0;
-}
+    .section_rec .inner .rec_text {
+        width: 50%;
+        height: auto;
+        border: 1px solid #121212;
+        margin: 0 0 -1px 0;
+    }
+
     .section_menu .menu-01 .menu_text {
         width: 400px;
     }
 
     .section_rec .inner .item {
-    width: 50%;
-    border: 1px solid #121212;
-}
+        width: 50%;
+        border: 1px solid #121212;
+    }
 
 
 
@@ -1227,16 +1249,20 @@ button {
 
     .section_store .store_right {
         width: 100%;
-        height: 100%;
+        /* h값 지우기 */
     }
 
     .section_store .store_right .inner {
         height: 100%;
-        padding: 0 0 150px 0;
-        transform: translateY(20%);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 100px 0;
+        transform: translateY(0%);
+    }
+
+    .section_store .store_right .inner .text_wrap p {
+        margin-bottom: 22px;
     }
 
     /* section_event */
@@ -1357,7 +1383,7 @@ button {
     }
 
     .section_event_mobile .list .item .text .inner .date_wrap .button {
-        width: 30%;
+        width: 126px;
         height: 38px;
 
         background-color: #6DB33E;
@@ -1373,25 +1399,29 @@ button {
     }
 
     .section_event_mobile .list .item .text .inner .date_wrap .button a {
-        width: 100%;
+        width: 126px;
         height: 100%;
         text-align: center;
         line-height: 38px;
     }
 
- /* sec_insta */
- .section_insta .inner .insta_text {
-    width: 33.3%;
- }
- .section_insta .inner .image {
-    width: 33.3%;
- }
-  .section_insta .inner .image:nth-child(6){
-    display: none;
-  }
-  .section_insta .inner .image:nth-child(7){
-    display: none;
-  }
+    /* sec_insta */
+    .section_insta .inner .insta_text {
+        width: 33.3%;
+    }
+
+    .section_insta .inner .image {
+        width: 33.3%;
+    }
+
+    .section_insta .inner .image:nth-child(6) {
+        display: none;
+    }
+
+    .section_insta .inner .image:nth-child(7) {
+        display: none;
+    }
+
     /* 900 */
 
 
