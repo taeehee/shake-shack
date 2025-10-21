@@ -7,6 +7,8 @@
 
 body {
     /* position: relative; 이거 뭐때문에 썼더라..*/
+    max-width: 4000px;
+    margin: 0 auto;
 }
 
 button {
@@ -49,16 +51,17 @@ button {
 .header .inner .nav_pc {
     display: flex;
     align-items: center;
+    font-family: 'Apercu-Condensed-Pro';
+    font-size: 20px;
+    letter-spacing: 7%;
+    font-weight: 500;
 
 }
 
 .header .inner .nav_pc .gnb {
     display: flex;
     align-items: center;
-    font-size: 18px;
-    font-weight: 500;
     margin-right: 60px;
-    /* gap: 48px; gap대신 아래 li에서 padding으로 간격띄워줌 */
 }
 
 .header .inner .nav_pc .gnb li {
@@ -68,7 +71,8 @@ button {
     padding: 0 24px;
 }
 
-.header .inner .nav_pc .gnb li:hover {
+.header .inner .nav_pc .gnb li:hover,
+.header .inner .nav_pc .lang_wrap li:hover {
     color: #6DB33E;
     font-weight: 600;
 }
@@ -92,9 +96,10 @@ button {
 
 .header .inner .nav_pc .gnb li:nth-child(5):hover {
     background-color: #FFFFFF;
-    border: 1px solid #6db33e;
+    border: 2px solid #6db33e;
     color: #6DB33E;
     text-align: center;
+    font-family: 'Pretendard';
 }
 
 /* hover했을때 텍스트 */
@@ -115,27 +120,27 @@ button {
 }
 
 .header .inner .nav_pc .lang_wrap li:nth-child(1) {
-    font-size: 16px;
+/*     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
-    color: #121212;
+    color: #121212; */
 }
 
 .header .inner .nav_pc .lang_wrap li:nth-child(1):hover {}
 
 .header .inner .nav_pc .lang_wrap li:nth-child(2) {
-    font-weight: 300;
-    color: #8a8a8a;
+/*     font-weight: 300;
+    color: #8a8a8a; */
 }
 
 .header .inner .nav_pc .lang_wrap li:nth-child(2):hover {
-    font-weight: 600;
-    color: #121212;
+/*     font-weight: 600;
+    color: #121212; */
 }
 
 .header .inner .nav_pc .lang_wrap li:nth-child(2):hover li:nth-child(1) {
-    font-weight: 300;
-    color: #8a8a8a;
+/*     font-weight: 300;
+    color: #8a8a8a; */
 }
 
 .header .inner .nav_pc .lang_wrap li a {
@@ -154,7 +159,8 @@ button {
 
 /* main */
 .main_visual {
-    width: 100%;
+    /* width: 100%; */
+
     background-color: var(--main-color);
     margin-bottom: 200px;
     border: solid 1px #121212;
@@ -188,6 +194,7 @@ button {
 }
 
 .main_visual .main_vis_wrap_01 .main_vis_text_sec_01 .text_wrap .title_text_wrap h2 {
+    max-width: 39%;
     font-family: 'Apercu-Condensed-Pro';
     font-size: 64px;
     font-weight: 700;
@@ -195,6 +202,7 @@ button {
 }
 
 .main_visual .main_vis_wrap_01 .main_vis_text_sec_01 .text_wrap .title_text_wrap p {
+    max-width: 39%;
     font-size: 28px;
     font-weight: 400;
     line-height: 42px;
@@ -254,13 +262,16 @@ button {
 }
 
 .main_visual .main_vis_wrap_02 .main_vis_text_sec_02 .text_wrap p {
+    max-width: 39%;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     margin-bottom: 12px;
+
 }
 
 .main_visual .main_vis_wrap_02 .main_vis_text_sec_02 .text_wrap strong {
+    max-width: 39%;
     font-size: 20px;
     line-height: 30px;
 }
@@ -448,9 +459,6 @@ button {
 /* section_menu */
 
 .section_menu {
-    width: 100%;
-    /* max-width: 1920px; */
-    /* 피그마 디자인 기준 */
     height: 472px;
     /* 고정높이 */
     margin: 0 auto;
@@ -606,7 +614,7 @@ button {
     justify-content: space-between;
     transform: translateY(30%);
 
-        
+
 }
 
 .section_store .store_right .inner .text_wrap {
