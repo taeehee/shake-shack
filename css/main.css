@@ -92,6 +92,7 @@ button {
 
 .header .inner .nav_pc .gnb li:nth-child(5)::before {
     content: "Order Now";
+    cursor:pointer;
 }
 
 .header .inner .nav_pc .gnb li:nth-child(5):hover {
@@ -163,7 +164,7 @@ button {
 
     background-color: var(--main-color);
     margin-bottom: 200px;
-    border: solid 1px #121212;
+    border: solid 2px #121212;
     border-left: 0;
     border-right: 0;
 }
@@ -172,7 +173,7 @@ button {
     width: 100%;
     height: 522px;
     display: flex;
-    border-bottom: 1px solid #121212;
+    border-bottom: 2px solid #121212;
     position: relative;
 }
 
@@ -223,7 +224,7 @@ button {
     background-color: #90CFEE;
     display: flex;
     overflow: hidden;
-    border-left: 1px solid #121212;
+    border-left: 2px solid #121212;
 }
 
 
@@ -288,7 +289,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid #121212;
+    border-left: 2px solid #121212;
 }
 
 .main_visual .main_vis_wrap_02 .main_vis_list .main_vis_item img {
