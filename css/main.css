@@ -210,8 +210,6 @@ button {
     object-fit: contain;
     transform: rotate(90deg);
     margin: 0 1px;
-
-
 }
 
 .main_visual .main_vis_wrap_02 {
@@ -244,7 +242,6 @@ button {
     font-weight: 400;
     line-height: 30px;
     margin-bottom: 12px;
-
 }
 
 .main_visual .main_vis_wrap_02 .main_vis_text_sec_02 .text_wrap strong {
@@ -275,7 +272,6 @@ button {
 }
 
 
-
 .section_rec {
     margin-bottom: 200px;
 }
@@ -291,7 +287,6 @@ button {
     height: auto;
     border: 1px solid #121212;
     margin: 0 0 -1px 0;
-
 }
 
 .section_rec .inner .rec_text .text_wrap {
@@ -591,8 +586,6 @@ button {
     flex-direction: column;
     justify-content: space-between;
     transform: translateY(30%);
-
-
 }
 
 .section_store .store_right .inner .text_wrap {
