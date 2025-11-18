@@ -120,30 +120,6 @@ button {
     gap: 22px;
 }
 
-.header .inner .nav_pc .lang_wrap li:nth-child(1) {
-/*     font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
-    color: #121212; */
-}
-
-.header .inner .nav_pc .lang_wrap li:nth-child(1):hover {}
-
-.header .inner .nav_pc .lang_wrap li:nth-child(2) {
-/*     font-weight: 300;
-    color: #8a8a8a; */
-}
-
-.header .inner .nav_pc .lang_wrap li:nth-child(2):hover {
-/*     font-weight: 600;
-    color: #121212; */
-}
-
-.header .inner .nav_pc .lang_wrap li:nth-child(2):hover li:nth-child(1) {
-/*     font-weight: 300;
-    color: #8a8a8a; */
-}
-
 .header .inner .nav_pc .lang_wrap li a {
     display: block;
     line-height: 100px;
@@ -348,6 +324,7 @@ button {
 .section_rec .inner .item:hover img {
     transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-3deg) skew(0deg, 0deg);
 }
+
 
 .section_rec .inner .item:nth-child(1) {
     margin: 0 -1px;
@@ -642,6 +619,11 @@ button {
     justify-content: space-between;
     background-color: var(--main-color);
     border-radius: 50px;
+}
+
+.section_store .store_right .inner .search_box input, 
+textarea {
+    padding: 0;
 }
 
 .section_store .store_right .inner .search_box input[type="text"] {

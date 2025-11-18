@@ -15,9 +15,11 @@
     --badge-letterSpacing: -2.5%;
     --badge-textColor: #ffff;
 
-    --redbadge-width: 18.54%;
+    /* --redbadge-width: 18.54%; */
+    --redbadge-width: 86px;
     --redbadge-color: #FE614F;
-    --grnbadge-width: 31.45%;
+    /* --grnbadge-width: 31.45%; */
+    --grnbadge-width: 145px;
     --grnbadge-color: #04AB68;
 
     /* section_menu */
